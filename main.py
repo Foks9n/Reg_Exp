@@ -9,7 +9,7 @@ with open('phonebook_raw.csv', 'r', encoding='utf-8') as f:
 # pprint(contacts_list)
 
 phone_pattern = re.compile(r'(\+7|8)\s*\(*(\d{3})\)*\s*\-*(\d{3})\s*\-*(\d{2})\s*\-*(\d{2})')
-extension_pattern = re.compile(r'(доб.)\s*(\d+)')
+extension_pattern = re.compile(r'\s*\(*(доб.)\s*(\d+)\)*\s*')
 text_pattern = re.compile(
     r'(\w+[А-яЁё])\s*\,*(\w+[А-яЁё])\s*\,*(\w+[А-яЁё])*\,*(\w+[А-яЁё])*\,*(\w+[А-яЁё]\w+[А-яЁё –]*'
     r'\–*\s*)*\,*(\+*\d\s*\(*\d+\)*\-*\s*\d+\-*\d+\-*\d+\s*\(*\w*\.*\s*\d*\)*)*\,*([a-zA-Z0-9_.+-]'
